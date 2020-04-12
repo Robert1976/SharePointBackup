@@ -13,7 +13,9 @@ Now create a new storage account in Azure. Create a new Blob storage container (
 
 Next import the logic app. It is saved within this repository with title 'QodersSharePointBackup.json'. It is a ARM template and you can import it in the same way as importing a Power Automate template. Navigate to https://docs.microsoft.com/en-us/azure/logic-apps/export-from-microsoft-flow-logic-app-template#deploy-template-by-using-the-azure-portal and follow step 1-9. At step 4 you should upload 'QodersSharePointBackup.json'.
 
+In step 6 use the storage account and key1 or key2 that you have created and saved previously.
 
+<img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/import.PNG" width="900" >
 
 # Configuration
 
