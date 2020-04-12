@@ -1,18 +1,18 @@
 # Simple Azure SharePoint Backup
 
-[This is the first part of the solution that does the heavy lifting of backing up SharePoint files to Azure blob storage. In the second part this solution will be extended with a SharePoint Site Design/Site Script that will automatically add a newly created Microsoft Team/SharePoint Site to the backup process]
+[This is the first part of the solution that does the heavy lifting of backing up SharePoint files to Azure blob storage. In the second part this solution will be extended with a SharePoint Site Design/Site Script that will automatically add a newly created Microsoft Team/SharePoint Site to the backup process. Also a service bus will then be added to the architecture]
 
 Simple Azure serverless SharePoint backup uses a logic app and storage account to backup SharePoint files. The solution only backups files that are stored in the Shared Documents library of your site (which is ideal if you use Teams). The solution uses the 'Delta' method of the Graph files api. Only newly added or edited files are updated (for more information see: https://docs.microsoft.com/en-us/graph/api/driveitem-delta?view=graph-rest-1.0&tabs=http).
 
 # Installation
 
-Start by creating an Azure Active Directory application. Follow the steps in this blog  https://www.lee-ford.co.uk/using-flow-with-graph-api/ and make sure your application gets 'Sites.ReadWrite.All' Graph Permissions.
+Start by creating an Azure Active Directory application. Follow the steps in this blog  https://www.lee-ford.co.uk/using-flow-with-graph-api/ and make sure your application has 'Sites.ReadWrite.All' Graph Permissions.
 
 <img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/graph.PNG" width="600" >
 
 Make sure you save your TenantID, Your applications ClientID and your applications ClientSecret. You need them further on.
 
-Now create a new storage account in Azure. Create a new Blob storage container (this container will hold the SharePoint files) and a new Table. Make sure you remeber the name of your storage account and write down one of your access keys (key1 or key2). Your blob should be a private blob!
+Now create a new storage account in Azure. Create a new Blob storage container (this container will hold the SharePoint files) and a new Table. Make sure you remember the name of your storage account and write down one of your access keys (key1 or key2). Your blob should be a private blob!
 
 Next import the logic app. It is saved within this repository with title 'QodersSharePointBackup.json'. It is a ARM template and you can import it in the same way as importing a Power Automate template. Navigate to https://docs.microsoft.com/en-us/azure/logic-apps/export-from-microsoft-flow-logic-app-template#deploy-template-by-using-the-azure-portal and follow step 1-9. At step 4 you should upload 'QodersSharePointBackup.json'.
 
@@ -20,7 +20,7 @@ In step 6 use the storage account and key1 or key2 that you have created and sav
 
 <img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/import.png" width="600" >
 
-Finally edit you newly created Logic App. Make sure that variables 'TenantID', 'ClientID' and 'ClientSecret' are set with the values from your AAD application. Also make sure that the 'GetRows' actions references your storage table and the 'Create blob' action (rather deep in the Logic App!) Folder path is set to your blob storage.
+Finally edit you newly created Logic App. Make sure that variables 'TenantID', 'ClientID' and 'ClientSecret' are set with the values from your AAD application. Also make sure that the 'GetRows' action references your storage table and the 'Create blob' action (rather deep in the Logic App!) Folder path is set to your blob storage.
 
 # Configuration
 
