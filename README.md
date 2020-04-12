@@ -7,8 +7,9 @@ Start by creating an Azure Active Directory application. Follow the steps in thi
 
 <img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/graph.PNG" width="600" >
 
-Make sure you save your TenantID, Your applications ClientID and your applications CLientSecret. You need them further on.
+Make sure you save your TenantID, Your applications ClientID and your applications ClientSecret. You need them further on.
 
+Next import the logic app. It is saved in this repository with title 'QodersSharePointBackup.json'. It is a ARM template and you can import it in the same way as importing a Power Automate template. Navigate to https://docs.microsoft.com/nl-nl/azure/logic-apps/export-from-microsoft-flow-logic-app-template#deploy-template-by-using-the-azure-portal
 
 # Configuration
 
