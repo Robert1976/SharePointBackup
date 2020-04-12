@@ -1,5 +1,5 @@
 # SharePointBackup
-Simple Azure serverless SharePoint backup using a logic app and storage account.
+Simple Azure serverless SharePoint backup using a logic app and storage account. It will only backup the Shared Documents part of your site.
 
 # Installation
 
@@ -23,4 +23,8 @@ DeltaLink: https://graph.microsoft.com/v1.0/sites/[tenantname].sharepoint.com,[s
 
 
 <img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/storageexplorer.PNG" width="400" >
+
+That's it! Your DeltaLink will be updated after each run of the logic app so that it will only pick up changes and new documents that have happened after the last run.
+
+# Extra
 
