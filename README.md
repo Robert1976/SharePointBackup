@@ -21,8 +21,9 @@ RowKey: [tenantname].sharepoint.com,[siteid],[webid] (for example: qoders.sharep
 
 DeltaLink: https://graph.microsoft.com/v1.0/sites/[tenantname].sharepoint.com,[siteid],[webid]/drive/root/delta (for example: https://graph.microsoft.com/v1.0/sites/qoders.sharepoint.com,2ad13d96-af88-4aa1-9fd1-c92ca098498c,a4995daa-ce03-4a20-a317-9a21525c894d/drive/root/delta)
 
+SiteUrl: The relative url of your SharePoint site (for example /sites/Testsite)
 
-<img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/storageexplorer.PNG" width="400" >
+<img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/storageexplorer1.PNG" width="400" >
 
 That's it! Your DeltaLink will be updated after each run of the logic app so that it will only pick up changes and new documents that have happened after the last run.
 
