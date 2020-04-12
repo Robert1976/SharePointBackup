@@ -1,5 +1,5 @@
 # SharePointBackup
-Simple Azure serverless SharePoint backup using a logic app and storage account. It will only backup the Shared Documents part of your site.
+Simple Azure serverless SharePoint backup uses a logic app and storage account to backup SharePoint files. The solution only backups files that are stored in the Shared Documents library of your site (which is ideal if you use Teams). The solution uses the 'Delta' method of the Graph files api. Only newly added or edited files are updated.
 
 # Installation
 
