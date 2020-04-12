@@ -7,4 +7,4 @@ Blal
 
 # Configuration
 
-<img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/getsiteid.PNG" width="600" >
+<img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/getsiteid.PNG" width="900" >
