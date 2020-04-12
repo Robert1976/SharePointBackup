@@ -17,7 +17,7 @@ In step 6 use the storage account and key1 or key2 that you have created and sav
 
 <img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/import.png" width="600" >
 
-Finally edit you newly created Logic App. Make sure that variables 'TenantID', 'ClientID' and 'ClientSecret' are set with the right values. Also make sure that the 'GetRows' actions references your storage table and the 'Create blob' action (rather deep in the Logic App!) Folder path is set to your blob storage.
+Finally edit you newly created Logic App. Make sure that variables 'TenantID', 'ClientID' and 'ClientSecret' are set with the values from your AAD application. Also make sure that the 'GetRows' actions references your storage table and the 'Create blob' action (rather deep in the Logic App!) Folder path is set to your blob storage.
 
 # Configuration
 
