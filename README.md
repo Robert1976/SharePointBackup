@@ -9,7 +9,11 @@ Start by creating an Azure Active Directory application. Follow the steps in thi
 
 Make sure you save your TenantID, Your applications ClientID and your applications ClientSecret. You need them further on.
 
-Next import the logic app. It is saved in this repository with title 'QodersSharePointBackup.json'. It is a ARM template and you can import it in the same way as importing a Power Automate template. Navigate to https://docs.microsoft.com/en-us/azure/logic-apps/export-from-microsoft-flow-logic-app-template#deploy-template-by-using-the-azure-portal and follow step 1-9. At step 4 you should upload 'QodersSharePointBackup.json'.
+Now create a new storage account in Azure. Create a new Blob storage container (this container will hold the SharePoint files) and a new Table. Make sure you remeber the name of your storage account and write down one of your access keys (key1 or key2).
+
+Next import the logic app. It is saved within this repository with title 'QodersSharePointBackup.json'. It is a ARM template and you can import it in the same way as importing a Power Automate template. Navigate to https://docs.microsoft.com/en-us/azure/logic-apps/export-from-microsoft-flow-logic-app-template#deploy-template-by-using-the-azure-portal and follow step 1-9. At step 4 you should upload 'QodersSharePointBackup.json'.
+
+
 
 # Configuration
 
