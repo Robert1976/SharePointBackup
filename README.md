@@ -15,7 +15,7 @@ Next import the logic app. It is saved within this repository with title 'Qoders
 
 In step 6 use the storage account and key1 or key2 that you have created and saved previously.
 
-<img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/import.png" width="900" >
+<img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/import.png" width="600" >
 
 # Configuration
 
