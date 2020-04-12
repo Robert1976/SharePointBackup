@@ -17,6 +17,8 @@ In step 6 use the storage account and key1 or key2 that you have created and sav
 
 <img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/import.png" width="600" >
 
+Finally edit you newly created Logic App. Make sure that variables 'TenantID', 'ClientID' and 'ClientSecret' are set with the right values. Also make sure that the 'GetRows' actions references your storage table and the 'Create blob' action (rather deep in the Logic App!) Folder path is set to your blob storage.
+
 # Configuration
 
 To add a site to the backup process you need to add it to the Azure storage table that you created in the previous step. First you need the siteid of you SharePoint site. You can easily retrieve the siteid by navigating to your site and appending '/_api/site/id' to the url.
@@ -38,6 +40,3 @@ SiteUrl: The relative url of your SharePoint site (for example /sites/Testsite)
 <img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/storageexplorer1.PNG" width="400" >
 
 That's it! Your DeltaLink will be updated after each run of the logic app so that it will only pick up changes and new documents that have happened after the last run.
-
-# Extra
-
