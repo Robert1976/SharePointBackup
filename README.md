@@ -1,4 +1,7 @@
 # Simple Azure SharePoint Backup
+
+[This is the first part of the solution that does the heavy lifting of backing up SharePoint files. In the second part this solution will be extended with a SharePoint Site Design/Site Script that will automatically add a newly created Microsoft Team/SharePoint Site to the backup process]
+
 Simple Azure serverless SharePoint backup uses a logic app and storage account to backup SharePoint files. The solution only backups files that are stored in the Shared Documents library of your site (which is ideal if you use Teams). The solution uses the 'Delta' method of the Graph files api. Only newly added or edited files are updated.
 
 # Installation
