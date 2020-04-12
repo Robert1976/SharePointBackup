@@ -5,7 +5,10 @@ Simple Azure serverless SharePoint backup using a logic app and storage account.
 
 Start by creating an Azure Active Directory application. Follow the steps in this blog  https://www.lee-ford.co.uk/using-flow-with-graph-api/ and make sure your application gets 'Sites.ReadWrite.All' Graph Permissions.
 
-<img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/graph.PNG" width="300" >
+<img src="https://github.com/Robert1976/SharePointBackup/blob/master/images/graph.PNG" width="600" >
+
+Make sure you save your TenantID, Your applications ClientID and your applications CLientSecret. You need them further on.
+
 
 # Configuration
 
